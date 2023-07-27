@@ -1,0 +1,15 @@
+String introduction =
+    "Ini merupakan sebuah aplikasi yang menyediakan maklumat berkenaan kursus Teknologi Sistem Komputer Dan Rangkaian di Kolej Vokasional Sungai Buloh";
+String sejarah =
+    "Kolej Vokasional Sungai Buloh (KVSB) merupakan sebuah institusi pendidikan yang berdaftar di bawah Jabatan Pendidikan Negeri Selangor. KVSB telah beroperasi sejak 1994 dan telah menghasilkan lebih daripada 10,000 lulusan yang berjaya. KVSB telah menerima sambutan yang baik daripada masyarakat dan industri kerana kualiti lulusan yang dihasilkan. KVSB telah mendapat pengiktirafan daripada Jabatan Pendidikan Negeri Selangor sebagai sebuah institusi pendidikan yang berjaya dan telah memperolehi sambutan yang baik daripada masyarakat dan industri kerana kualiti lulusan yang dihasilkan. KVSB telah mendapat pengiktirafan daripada Jabatan Pendidikan Negeri Selangor sebagai sebuah institusi pendidikan yang berjaya dan telah memperolehi sambutan yang baik daripada masyarakat dan industri kerana kualiti lulusan yang dihasilkan. KVSB telah mendapat pengiktirafan daripada Jabatan Pendidikan Negeri Selangor sebagai sebuah institusi pendidikan yang berjaya dan telah memperolehi sambutan yang baik daripada masyarakat dan industri kerana kualiti lulusan yang dihasilkan.";
+String sejaraIsk =
+    "Program Sijil Vokasional Malaysia (Teknologi Sistem Komputer Rangkaian) ini ditawarkan kepada pelajar lepasan PT3 yang berumur 16 tahun. Program ini menyediakan pelajar kepada asas perniagaan, penyelenggaraan, pengoperasian dan konfigurasi sistem komputer serta rangkaian dan penyimpanan data di samping pengurusan pentadbiran dan integrasi sistem maklumat.";
+String pengiktirafan =
+    "Program Teknologi Sistem Komputer Dan Rangkaian telah diperakukan bahawa kelayakan akademik yang dianugerahkan adalah selaras dengan standard dan kualiti yang telah ditetapkan oleh Lembaga Juruteknologi Malaysia (MBOT).";
+String pensyarah =
+    "Terdapat 11 orang tenaga pengajar yang berpengalaman dan berdedikasi yang akan membantu pelajar dalam proses pembelajaran. ";
+String ibm1 = "Program Pathways in Technology Early College High Schools (P-TECH) merupakan salah satu program kerjasama antara Kementerian Pendidikan Malaysia dan  Perbadanan Kemajuan Multimedia (MDEC) bersama-sama dengan IBM bagi menyediakan belia Malaysia untuk kerjaya berkaitan teknologi.";
+String ibm2 = "Program P-TECH mula dilaksanakan pada tahun 2020 bersama-sama dengan pelajar Kolej Vokasional Sungai Buloh. ";
+String ibm3 = "Program ini akan dilaksanakan selama 4 tahun bermula ketika pelajar berada di tahun 1 SVM sehingga tahun 2 DVM. ";
+String ibm4 = "Para pelajar akan didedahkan dengan 6 modul pembelajaran bersama dengan mentor-mentor yang akan dikendalikan oleh pihak IBM, Malaysia.";
+String ibm5 = "Hasrat IBM adalah untuk melahirkan “new collars” dalam kalangan pelajar bagi meningkatkan nilai diri mereka dengan cara mendapatkan kemahiran, meningkatkan kemahiran, mendapatkan kemahiran baharu serta menguasai kemahiran merentasi bidang";
