@@ -1,16 +1,35 @@
 # kvsboutreach_project
 
-A new Flutter project.
+Flutter's new project which aims to introduce Sungai Buloh Vocational College to high school students and parents in nurturing students to enter vocational college.
 
-## Getting Started
+#To-do
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Homepage [ ]
+  
+- KVSB Info [ ]
+  - Bidang Yang Ditawarkan [ ]
+  - Dasar Kolej [ ]
+  - Perakuan Akreditasi MBOT [ ]
+  - Perakuan Akreditasi MQA [ ]
+  - Piagam Pelanggan [ ]
+  - Tentang KVSB [ ]
+  - Visi & Misi [ ]
+    
+- Programme List [ ]
+  -  Jabatan Teknologi Mekanikal dan Pembuatan
+    -  Program Teknologi Automotif [ ]
+    -  Program Teknologi Pemesinan Industri [ ]
+    -  Program Teknologi Penyejukan & Penyamanan Udara [ ]
+      
+  -  Jabatan Teknologi Elektrik dan Elektronik
+    -  Program Teknologi Elektrik [ ]
+    -  Program Teknologi Elektronik [ ]
+      
+  -  Jabatan Teknologi Awam
+    -  Program Teknologi Pembinaan [ ]
+      
+  -  Jabatan Teknologi Maklumat
+    -  Program Teknologi Maklumat [ ]
+      
+  -  Jabatan Perniagaan
+    -  Program Perakaunan [ ]
