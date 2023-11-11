@@ -9,6 +9,7 @@ class CustomSliverAppBar extends StatefulWidget {
 
 	double firstTitleFontSize;
 	bool isPinned;
+	bool isActionIconShowed;
 	Widget? background;
 	Color textColor;
 
@@ -18,6 +19,7 @@ class CustomSliverAppBar extends StatefulWidget {
 		required this.primary_title, 
 		required this.expandedTitleScaleRadius,
 		this.isPinned = true,
+		this.isActionIconShowed = true,
 		this.firstTitleFontSize = 20,
 		this.background,
 		this.textColor = const Color(0xff042100),
@@ -61,13 +63,13 @@ class _CustomSliverAppBarState extends State<CustomSliverAppBar> {
 			expandedHeight: 150,
 			backgroundColor: Color(0xffF8FAF0),
 			actions: <Widget>[
-				Padding(
+				widget.isActionIconShowed ? Padding(
 					padding: const EdgeInsets.only(top: 10.0),
 					child: Image.network(
 						'https://drive.google.com/uc?export=view&id=1iPGwRrH3fKR0AfDjhDYpuCbmuFf9Pw_X',
 						width: 100
 					),
-				),
+				) : Container(),
 				
 				SizedBox(
 					width: 20,

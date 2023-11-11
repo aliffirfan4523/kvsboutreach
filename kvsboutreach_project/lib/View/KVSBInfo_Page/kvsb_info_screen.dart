@@ -47,6 +47,7 @@ class _InfoKVSBState extends State<InfoKVSB> {
             scaffoldKey: _scaffoldKey,
             primary_title: "Info KVSB",
             textColor: Color(0xffF8FAF0),
+            isActionIconShowed: false,
             expandedTitleScaleRadius: 1.5,
             background: Container(
               decoration: BoxDecoration(

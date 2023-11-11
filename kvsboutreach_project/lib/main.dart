@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:kvsboutreach_project/View/Home_Page/home_screen.dart';
-import 'package:kvsboutreach_project/View/Programme_List_Page/programme_list_screen.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'View/KVSBInfo_Page/kvsb_info_screen.dart';
+import 'View/SenaraiProgram/SenaraiProgram_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,6 +36,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin{
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //showPerformanceOverlay: true,
       theme: ThemeData(
           scrollbarTheme: ScrollbarThemeData(
               thumbVisibility: MaterialStateProperty.all(true),
@@ -100,21 +101,21 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin{
             SalomonBottomBarItem(
               icon: Icon(FontAwesomeIcons.home),
               title: Text(
-                _buildTitle('Laman Utama', currentIndex == 0),
+                'Laman Utama', 
                 style: TextStyle(fontSize: 12),
               ),
             ),
             SalomonBottomBarItem(
               icon: Icon(FontAwesomeIcons.school),
               title: Text(
-                _buildTitle('  Info KVSB', currentIndex == 1),
+                'Info KVSB',
                 style: TextStyle(fontSize: 12),
               ),
             ),
             SalomonBottomBarItem(
               icon: Icon(FontAwesomeIcons.tasks),
               title: Text(
-                _buildTitle('Program-Program', currentIndex == 2),
+                'Program-Program',
                 style: TextStyle(fontSize: 12),
               ),
             ),
@@ -122,8 +123,5 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin{
         );
   }
 }
-  String _buildTitle(String title, bool isTrue) {
-    return  isTrue ? title : '' ;
-  }
 
 
