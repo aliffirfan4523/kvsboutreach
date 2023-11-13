@@ -1,6 +1,7 @@
 class SenaraiProgramModel{
 	final String jabatan;
 	final List<String> programs;
+  //final String imageLink;
 
 	SenaraiProgramModel({required this.jabatan, required this.programs});
 }

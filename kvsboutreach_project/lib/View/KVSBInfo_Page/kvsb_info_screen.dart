@@ -7,6 +7,7 @@ import 'package:kvsboutreach_project/View/KVSBInfo_Page/Piagam_Pelanggan/Piagam_
 import 'package:kvsboutreach_project/View/KVSBInfo_Page/Tentang_KVSB/Tentang_KVSB_screen.dart';
 import 'package:kvsboutreach_project/View/KVSBInfo_Page/Visi_&_Misi/Visi_&_Misi_screen.dart';
 import 'package:kvsboutreach_project/View/KVSBInfo_Page/WebView_Page/WebView_screen.dart';
+import 'package:kvsboutreach_project/utils/constants.dart';
 
 
 import '../Widget/CustomSliverAppBar/CustomSliverAppBar_widget.dart';
@@ -31,7 +32,7 @@ class _InfoKVSBState extends State<InfoKVSB> {
     TwoTypes("Bidang Yang Ditawarkan", BidangYangDitawarkan()),
     TwoTypes("Perakuan Akreditasi MBOT", PerakuanAkreditasiMBOT()),
     TwoTypes("Perakuan Akreditasi MQA", PerakuanAkreditasiMQA()),
-    TwoTypes("Permohonan Online", WebViewApp(urlPath: 'https://spskt4.moe.gov.my/spat4_mohon/index.cfm',)),
+    TwoTypes("Permohonan Online", WebViewApp(urlPath: 'https://spskt4.moe.gov.my/spat4_mohon/log_masuk.cfm',)),
     TwoTypes("eTVET", WebViewApp(urlPath: 'http://etvet.moe.edu.my/',)),
   ];
 
@@ -81,6 +82,9 @@ class _InfoKVSBState extends State<InfoKVSB> {
           SliverList(
 					  delegate: SliverChildBuilderDelegate(
 					    (context, index) => Card(
+                shadowColor: AppColors.primaryColor,
+                elevation: 5,
+                color: AppColors.primaryColor,
 					      child: ListTile(
 					        title: Text(title[index].string), // Use the title property of TwoTypes
 					        trailing: Icon(Icons.arrow_forward_ios),

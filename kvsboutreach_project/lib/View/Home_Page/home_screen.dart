@@ -5,6 +5,8 @@ import 'package:kvsboutreach_project/View/Widget/CustomSliverAppBar/CustomSliver
 import 'package:kvsboutreach_project/View/Widget/Side_Drawer/side_drawer.dart';
 import 'package:kvsboutreach_project/View/index_screen.dart';
 
+import '../../utils/constants.dart';
+
 
 class Home_Screen extends StatefulWidget {
 
@@ -27,17 +29,19 @@ class _Home_ScreenState extends State<Home_Screen> {
         //drawer: sideDrawer(),
         key: _scaffoldKey,
         extendBody: true,
-        backgroundColor: Color(0xffF8FAF0),
+        backgroundColor: AppColors.backgroundColor,
         body: CustomScrollView(
           slivers: <Widget>[
             CustomSliverAppBar(
+              isPinned: false,
               scaffoldKey: _scaffoldKey,
               primary_title: "KVSB Outreach",
+              textColor: AppColors.textColor,
               expandedTitleScaleRadius: 1.5,
               background: Container(
                 padding: EdgeInsets.only(top: 105, left: 50),
                 decoration: BoxDecoration(
-                  color: Color(0xffF8FAF0),
+                  color: AppColors.backgroundColor,
                   borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(80.0),
                     bottomRight: Radius.circular(80.0),
@@ -46,7 +50,7 @@ class _Home_ScreenState extends State<Home_Screen> {
                 child: Text(
                   "Selamat Datang ke",
                   style: TextStyle(
-                    color: Color(0xff042100),
+                    color: AppColors.textColor.withOpacity(0.8),
                     fontSize: 18.0,
                   ) //TextStyle
                 ), //Text,
@@ -61,9 +65,9 @@ class _Home_ScreenState extends State<Home_Screen> {
                 child: Align(
                   alignment: Alignment.center,
                   child: Text(
-                    "Ini merupkan sebuah aplikasi yang menyediakan maklumat berkenaan kursus-kursus yang terdapat di Kolej Vokasional Sungai Buloh",
+                    "Ini merupakan sebuah aplikasi yang menyediakan maklumat berkenaan kursus-kursus yang terdapat di Kolej Vokasional Sungai Buloh",
                     style: TextStyle(
-                      color: Color(0xff042100),
+                      color: AppColors.textColor,
                       fontSize: 15.0,
                     ) //TextStyle
                   ),
@@ -73,7 +77,7 @@ class _Home_ScreenState extends State<Home_Screen> {
             SliverToBoxAdapter(
               child:  Divider( 
                 height: 50, 
-                color: Colors.green, 
+                color: AppColors.textColor, 
                 thickness: 1, 
                 indent: 20, 
                 endIndent: 20, 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kvsboutreach_project/View/Widget/Side_Drawer/side_drawer.dart';
+import 'package:kvsboutreach_project/utils/constants.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
 
 import '../../Model/SenaraiProgram/SenaraiProgramModel.dart';
@@ -52,7 +53,7 @@ class _SenaraiProgramState extends State<SenaraiProgram> {
                       padding: new EdgeInsets.symmetric(horizontal: 12.0),
                       alignment: Alignment.centerLeft,
                       child: new Text(senaraiPrograms[index].jabatan,
-                        style: const TextStyle(color: Color(0xff386A20), fontSize: 16,fontWeight: FontWeight.bold),
+                        style: const TextStyle(color: AppColors.textColor, fontSize: 16,fontWeight: FontWeight.bold),
                         ),
                       ),
                     content: ListView.builder(

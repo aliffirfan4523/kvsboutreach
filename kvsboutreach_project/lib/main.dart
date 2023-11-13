@@ -6,6 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'View/KVSBInfo_Page/kvsb_info_screen.dart';
 import 'View/SenaraiProgram/SenaraiProgram_screen.dart';
+import 'utils/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,12 +39,15 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin{
     return MaterialApp(
       //showPerformanceOverlay: true,
       theme: ThemeData(
-          scrollbarTheme: ScrollbarThemeData(
-              thumbVisibility: MaterialStateProperty.all(true),
-              thickness: MaterialStateProperty.all(10),
-              thumbColor: MaterialStateProperty.all(Color(0xff386A20)),
-              radius: const Radius.circular(10),
-              minThumbLength: 100)),
+        backgroundColor: AppColors.backgroundColor,
+        scrollbarTheme: ScrollbarThemeData(
+          thumbVisibility: MaterialStateProperty.all(true),
+          thickness: MaterialStateProperty.all(10),
+          thumbColor: MaterialStateProperty.all(AppColors.secondaryColor),
+          radius: const Radius.circular(10),
+          minThumbLength: 50
+        )
+      ),
       home: Scaffold(
         extendBody: true,
         body: PageView(
@@ -73,7 +77,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin{
 
   SalomonBottomBar buildSalomonBottomBar() {
     return SalomonBottomBar(
-          backgroundColor: Color(0xff386A20),
+          backgroundColor: AppColors.containerColor,
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white70,
           currentIndex: currentIndex,

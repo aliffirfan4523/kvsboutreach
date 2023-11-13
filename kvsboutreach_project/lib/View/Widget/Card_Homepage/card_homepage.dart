@@ -1,5 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
+
 import 'package:flutter/material.dart';
+
+import '../../../utils/constants.dart';
 
 class Card_Homepage extends StatelessWidget {
   Card_Homepage({super.key, required this.title, required this.image_url});
@@ -19,15 +22,15 @@ class Card_Homepage extends StatelessWidget {
               left: 50,
               child: Container(
                 decoration: BoxDecoration(
-                  color: Color(0xff386A20),
-                  border: Border.all(color: Color(0xff386A20)),
+                  color: AppColors.primaryColor,
+                  border: Border.all(color: AppColors.primaryColor),
                   borderRadius: const BorderRadius.only(
                     bottomRight: Radius.circular(50.0),
                     topRight: Radius.circular(50.0),
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Color(0xff386A20).withOpacity(0.5),
+                      color: AppColors.primaryColor.withOpacity(0.5),
                       spreadRadius: 5,
                       blurRadius: 7,
                       offset: Offset(4, 4), // changes position of shadow
