@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:kvsboutreach_project/View/Widget/Card_Homepage/card_homepage.dart';
 import 'package:kvsboutreach_project/View/Widget/CustomSliverAppBar/CustomSliverAppBar_widget.dart';
-import 'package:kvsboutreach_project/View/Widget/Side_Drawer/side_drawer.dart';
+import 'package:kvsboutreach_project/View/Widget/ImagePreviewWidget/ImagePreviewWidget.dart';
 import 'package:kvsboutreach_project/View/index_screen.dart';
 
 import '../../utils/constants.dart';
@@ -22,14 +22,12 @@ class _Home_ScreenState extends State<Home_Screen> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         //drawer: sideDrawer(),
         key: _scaffoldKey,
         extendBody: true,
-        backgroundColor: AppColors.backgroundColor,
         body: CustomScrollView(
           slivers: <Widget>[
             CustomSliverAppBar(

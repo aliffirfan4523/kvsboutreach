@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../utils/constants.dart';
+
 // ignore: must_be_immutable
 class CustomSliverAppBar extends StatefulWidget {
 
@@ -9,6 +11,7 @@ class CustomSliverAppBar extends StatefulWidget {
 
 	double firstTitleFontSize;
 	bool isPinned;
+	bool isFloating;
 	bool isActionIconShowed;
 	Widget? background;
 	Color textColor;
@@ -19,10 +22,11 @@ class CustomSliverAppBar extends StatefulWidget {
 		required this.primary_title, 
 		required this.expandedTitleScaleRadius,
 		this.isPinned = true,
+		this.isFloating = false,
 		this.isActionIconShowed = true,
 		this.firstTitleFontSize = 20,
 		this.background,
-		this.textColor = const Color(0xff042100),
+		this.textColor = AppColors.textColor,
 	
 	});
 
@@ -36,7 +40,7 @@ class _CustomSliverAppBarState extends State<CustomSliverAppBar> {
 		return SliverAppBar(
 			snap: false,
 			pinned: widget.isPinned,
-			floating: false,
+			floating: widget.isFloating,
 			shadowColor: Color(0xffF8FAF0),
 			shape: ContinuousRectangleBorder(
 				borderRadius: BorderRadius.only(
@@ -61,7 +65,7 @@ class _CustomSliverAppBarState extends State<CustomSliverAppBar> {
 				background: widget.background,
 			), //FlexibleSpaceBar
 			expandedHeight: 150,
-			backgroundColor: Color(0xffF8FAF0),
+			backgroundColor: AppColors.backgroundColor,
 			actions: <Widget>[
 				widget.isActionIconShowed ? Padding(
 					padding: const EdgeInsets.only(top: 10.0),

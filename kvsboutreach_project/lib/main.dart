@@ -39,7 +39,8 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin{
     return MaterialApp(
       //showPerformanceOverlay: true,
       theme: ThemeData(
-        backgroundColor: AppColors.backgroundColor,
+        scaffoldBackgroundColor: AppColors.backgroundColor,
+        //backgroundColor: AppColors.backgroundColor,
         scrollbarTheme: ScrollbarThemeData(
           thumbVisibility: MaterialStateProperty.all(true),
           thickness: MaterialStateProperty.all(10),
@@ -77,9 +78,10 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin{
 
   SalomonBottomBar buildSalomonBottomBar() {
     return SalomonBottomBar(
-          backgroundColor: AppColors.containerColor,
-          selectedItemColor: Colors.white,
-          unselectedItemColor: Colors.white70,
+      selectedColorOpacity: 0.05,
+          backgroundColor: AppColors.whiteColor,
+          selectedItemColor: AppColors.selectedIconColor,
+          unselectedItemColor: AppColors.unselectedIconColor,
           currentIndex: currentIndex,
           margin: EdgeInsets.all(10),
           itemShape: RoundedRectangleBorder(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kvsboutreach_project/View/KVSBInfo_Page/Tentang_KVSB/Tentang_KVSB_screen.dart';
 import 'package:kvsboutreach_project/View/Widget/Side_Drawer/side_drawer.dart';
 import 'package:kvsboutreach_project/utils/constants.dart';
 import 'package:sticky_headers/sticky_headers/widget.dart';
@@ -37,7 +38,6 @@ class _SenaraiProgramState extends State<SenaraiProgram> {
               expandedTitleScaleRadius: 1.5,
               isPinned: false,
               firstTitleFontSize: 15,
-              
             ),
             SliverToBoxAdapter(
               child: ListView.builder(
@@ -49,7 +49,7 @@ class _SenaraiProgramState extends State<SenaraiProgram> {
                   return StickyHeader(
                     header: Container(
                       height: 38.0,
-                      color: Color(0xffF8FAF0),
+                      color: AppColors.backgroundColor,
                       padding: new EdgeInsets.symmetric(horizontal: 12.0),
                       alignment: Alignment.centerLeft,
                       child: new Text(senaraiPrograms[index].jabatan,
@@ -64,7 +64,7 @@ class _SenaraiProgramState extends State<SenaraiProgram> {
                           onTap: (){
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context) => Index_Screen(),
+                                builder: (context) => TentangKVSB(),
                               )
                             );
                             print("Card $index");

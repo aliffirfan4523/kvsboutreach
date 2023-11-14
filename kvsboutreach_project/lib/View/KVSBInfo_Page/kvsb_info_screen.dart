@@ -1,17 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:kvsboutreach_project/View/KVSBInfo_Page/Bidang_Yang_Ditawarkan/Bidang_Yang_Ditawarkan_screen.dart';
-import 'package:kvsboutreach_project/View/KVSBInfo_Page/Dasar_Kolej/Dasar_Kolej_screen.dart';
-import 'package:kvsboutreach_project/View/KVSBInfo_Page/Perakuan_Akreditasi_MBOT/Perakuan_Akreditasi_MBOT_screen.dart';
-import 'package:kvsboutreach_project/View/KVSBInfo_Page/Piagam_Pelanggan/Piagam_Pelanggan_screen.dart';
-import 'package:kvsboutreach_project/View/KVSBInfo_Page/Tentang_KVSB/Tentang_KVSB_screen.dart';
-import 'package:kvsboutreach_project/View/KVSBInfo_Page/Visi_&_Misi/Visi_&_Misi_screen.dart';
-import 'package:kvsboutreach_project/View/KVSBInfo_Page/WebView_Page/WebView_screen.dart';
+import 'package:kvsboutreach_project/Model/KVSBInfo/KVSBInfoModel.dart';
+
 import 'package:kvsboutreach_project/utils/constants.dart';
 
-
 import '../Widget/CustomSliverAppBar/CustomSliverAppBar_widget.dart';
-import 'Perakuan_Akreditasi_MQA/Perakuan_Akreditasi_MQA_screen.dart';
 
 class InfoKVSB extends StatefulWidget {
   const InfoKVSB({super.key});
@@ -24,17 +17,7 @@ class _InfoKVSBState extends State<InfoKVSB> {
 
 	final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   
-  List<TwoTypes> title = [
-    TwoTypes("Tentang KVSB", TentangKVSB()),
-    TwoTypes("Visi & Misi", VisiMisi()),
-    TwoTypes("Piagam Pelanggan", PiagamPelanggan()),
-    TwoTypes("Dasar Kolej", DasarKolej()),
-    TwoTypes("Bidang Yang Ditawarkan", BidangYangDitawarkan()),
-    TwoTypes("Perakuan Akreditasi MBOT", PerakuanAkreditasiMBOT()),
-    TwoTypes("Perakuan Akreditasi MQA", PerakuanAkreditasiMQA()),
-    TwoTypes("Permohonan Online", WebViewApp(urlPath: 'https://spskt4.moe.gov.my/spat4_mohon/log_masuk.cfm',)),
-    TwoTypes("eTVET", WebViewApp(urlPath: 'http://etvet.moe.edu.my/',)),
-  ];
+  
 
   @override
   Widget build(BuildContext context) {
@@ -42,75 +25,69 @@ class _InfoKVSBState extends State<InfoKVSB> {
     	extendBodyBehindAppBar: true,
       //drawer: sideDrawer(),
       key: _scaffoldKey,
-      body: CustomScrollView(
-      	slivers: [
-      		CustomSliverAppBar(
-            scaffoldKey: _scaffoldKey,
-            primary_title: "Info KVSB",
-            textColor: Color(0xffF8FAF0),
-            isActionIconShowed: false,
-            expandedTitleScaleRadius: 1.5,
-            background: Container(
-              decoration: BoxDecoration(
-                borderRadius: const BorderRadius.only(
-                    bottomRight: Radius.circular(50.0),
-                    bottomLeft: Radius.circular(50.0),
-                  ),
-              ),
-              child: CachedNetworkImage(
-                color: Colors.black,
-                imageUrl: "https://drive.google.com/uc?export=view&id=1tLpdSf1u8FxUvy0SCrjZ17g3H4rD5eYS",
-                imageBuilder: (context, imageProvider) => Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: imageProvider,
-                        colorFilter: ColorFilter.mode(
-                          Colors.black.withOpacity(0.4), // Adjust color and opacity as needed
-                          BlendMode.srcOver, // Blend mode to control how the color is applied
+      body: NestedScrollView(
+        floatHeaderSlivers: true,
+      	headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled){
+          return <Widget>[
+            SliverAppBar(
+              flexibleSpace: FlexibleSpaceBar(
+                titlePadding: EdgeInsets.only(left: 20, bottom: 15),
+                title: Text(
+                  "Info KVSB",
+                  style: TextStyle(
+                    color: AppColors.backgroundColor,
+                    fontSize: 20,
+                  ) //TextStyle
+                ),
+                background: Container(
+                  child: CachedNetworkImage(
+                    color: Colors.black,
+                    imageUrl: "https://drive.google.com/uc?export=view&id=1tLpdSf1u8FxUvy0SCrjZ17g3H4rD5eYS",
+                    imageBuilder: (context, imageProvider) => Container(
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: imageProvider,
+                            colorFilter: ColorFilter.mode(
+                              Colors.black.withOpacity(0.4), // Adjust color and opacity as needed
+                              BlendMode.srcOver, // Blend mode to control how the color is applied
+                            ),
+                            fit: BoxFit.cover,
+                            //colorFilter:ColorFilter.mode(Colors.red, BlendMode.colorBurn)
                         ),
-                        fit: BoxFit.cover,
-                        //colorFilter:ColorFilter.mode(Colors.red, BlendMode.colorBurn)
+                      ),
                     ),
+                    //placeholder: (context, url) => CircularProgressIndicator(),
+                    errorWidget: (context, url, error) => Icon(Icons.error),
                   ),
                 ),
-                //placeholder: (context, url) => CircularProgressIndicator(),
-                errorWidget: (context, url, error) => Icon(Icons.error),
               ),
-            ),
-          ),
-
-          SliverList(
-					  delegate: SliverChildBuilderDelegate(
-					    (context, index) => Card(
-                shadowColor: AppColors.primaryColor,
-                elevation: 5,
-                color: AppColors.primaryColor,
-					      child: ListTile(
-					        title: Text(title[index].string), // Use the title property of TwoTypes
-					        trailing: Icon(Icons.arrow_forward_ios),
-					        onTap: () {
-					          Navigator.push(
-											context, 
-											MaterialPageRoute(
-												builder: (context) => title[index].path,
-											),
-										);
-					          print(title[index].string);
-					        },
-					      ),
-					    ),
-					    childCount: title.length,
-					  ),
-					),
-      	],
+              floating: false,
+              pinned: false,
+              expandedHeight: 200.0,
+              forceElevated: innerBoxIsScrolled,
+              backgroundColor: AppColors.primaryColor,
+            )
+          ];
+        },
+        body: GridView.builder(
+          padding: const EdgeInsets.all(20),
+          itemCount: 8,
+          itemBuilder: (BuildContext context, int index) {
+            return Container(
+              color: AppColors.textColor,
+              height: 100,
+              child: Center(child: Text('Item $index')),
+            );
+          }, 
+          shrinkWrap: true,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 50,
+            mainAxisSpacing: 15,
+            childAspectRatio: 1.5,
+          )
+        ),
       ),
     );
   }
-}
-
-class TwoTypes {
-  final String string;
-  final Widget path;
-
-  TwoTypes(this.string, this.path);
 }
