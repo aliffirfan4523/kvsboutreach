@@ -1,5 +1,11 @@
 {
   "name": "Flutter",
   "image": "matspfeiffer/flutter",
-  "extensions": ["dart-code.dart-code", "dart-code.flutter"]
+  "extensions": ["dart-code.dart-code", "dart-code.flutter"],
+  "runArgs": ["--device=/dev/net/tun"],
+    "features": {
+        // ...
+        "ghcr.io/tailscale/codespace/tailscale": {}
+        // ...
+    }
 }
